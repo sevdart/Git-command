@@ -1,0 +1,84 @@
+1) git init 
+
+Bu komanda git reposu initilize edir, ve daxilinde gizli fayl olaraq .git fayli yaradir. Bunu bir defe yaradanda edirsen.
+
+2) git remote add origin git@github.com:sevdart/test.git
+
+bu comanda vasiteysile remote origin, yeni senin edeceyin deyisikler hara getmelidir onun yeridir. Destination demekdir.
+
+3) git remote -v 
+Bu komanda hazirki remote destination gosterir.
+
+4) git remote set-url origin  git@github.com:sevdart/test2.git
+Eger biz destination deyisemek isteyirikse onda yeni url set etmeliyik, yuxaridaki komanda ile.
+
+5) git status
+Bize hazirdaki hansi deyisikler var onu gosterir.
+yasil ve qirmizi rengde bize deyisikleri gosterir; 
+qirimizi rengde olanlar getmemislerdir, yeni deyisiklik olub ama commite elave olunmayib.
+Yasil rengde ise elave olunub commite hazirdir
+
+6) git add . 
+bu komanda directory-deki butun deyisikleri goturur (. -> all demekdir)
+
+7) git commit -m "My new commit"
+-m vasiteysile biz commit mesajini teyin edirik
+
+8) git commit -am "
+
+9) git add . veya git add sevda.txt
+burda hamsini elave edir veya sevda.txt elave edir.
+
+Note: Eger file tezedirse veya ilk defe yaradilibsa onda onu git add file_adi komandasi vasiteysile elave olunmalidir git repoya.
+Amma eger file kohnedirse ona ehtiyac yoxdurki git add file_Adi yazasan, evezine bir basa commit mesaji vasitesiyle yeni;
+git commit -am "my commit" -> burda -a var olan fayli(yeni git history olan fayl) elave edir ve commit mesaji teyin edirsen
+
+10) git restore --staged  sevda_3.txt
+Git-de iki level var, biri changes digeri ise staged. Bizim elave etdiyimiz deyisikler add eden zaman stage dusur.
+Add etmediklerimiz ise qalir changes. Eger bir nece faylimiz varsa ve elave etmisikse stage, 
+sonradan onun getmesinin qarsini almaq isteyirikse onda bu komda ile hemin fayli restore edirik change leveline dusur.
+Hazirdaki hemin fayl gite commit olumayacaq ve qirimizi olaraq qalacaq.
+
+11) git log
+bizim etdiyimiz deyisikler ve commit mesajlar eks olunur.
+
+12) git push --set-upstream origin master
+Eger branch ilk defe push olunursa onda set upstream edirikki, hemin branch push olsun
+
+13) git push 
+novbeti commitlerin pushlarinda ise adi qaydada bu komandadan istifade edirik.
+
+14) git checkout -b feture-1-readme 
+Eger branch movcud deyilse ve yaratmaq isetyirikse onda -b optionu ile hemin branchi yaradib ona daxil oluruq.
+
+15) git checkout branch_name
+Bu ise hemin brancha kecid edir.
+
+16) git branch 
+Bu hazirki branch-lari sene gosterir
+
+17) git pull
+Remote-da olan deyisikleri bize localimiza eks eletdirir.
+
+18) git merge branch_name
+
+19) git commit -am "#3 issue has been resolved"
+Commit  icinde  eger #3 qeyd olunursa o hansisa issue nomresidir.
+
+20) git commit --amend -m "Added readme file"
+Bu sehven eger commit mesajini yazsaq onda amend yeni deyisiklik edirik duzelish edirik.
+
+21) git stash save -m "your message"
+
+Bu command bize helelik lazim olmayan yazdigimiz kodlari gizledir. 
+
+22) git stash apply 1(indexi ile)
+
+eger biz gizletdiyimiz kodlari geri qaytarmaq isteyirikse bu commaddan istifade edirik.
+
+23) git stash list
+eger bir nece gizletdiyimiz kodlar ve yaxud deyisiklikler varsa, biz onlari list halinda goreceyik. 
+
+24) git stash pop 
+en axirinci gizletdiyimiz deyisikliyimizi bize qaytarir. 
+
